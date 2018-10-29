@@ -16,7 +16,7 @@ import java.util.List;
 public interface ExternalFareRateClient {
 
 
-    ProviderPrice[] getProviderPriceList(String start,String end);
+    List<ProviderPrice> getProviderPriceList(String start,String end);
 
 }
 
