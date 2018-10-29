@@ -5,7 +5,8 @@ package com.fare.compare.fare.model;
  * Date: 10/29/18
  * Project : fare
  */
-public class ProviderPrice {
+
+public class ProviderPrice implements Comparable<ProviderPrice>{
 
     private String provider;
     private Long price;
@@ -24,5 +25,11 @@ public class ProviderPrice {
 
     public void setPrice(Long price) {
         this.price = price;
+    }
+
+
+    @Override
+    public int compareTo(ProviderPrice o) {
+        return price.compareTo(o.price);
     }
 }
